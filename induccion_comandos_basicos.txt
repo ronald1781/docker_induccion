@@ -1,1 +1,30 @@
- docker info
+ docker info -> visualiza informacion como donde esta instalado y uso de cpu etc
+ docker images -> lista imagenes creados
+ docker build -> crear imagen basada en 
+   exam  docker build -t spring-boot-docker:0.02 .
+  ls -l
+ docker run -> para ejecutar
+exam  docker run --name spring-boot-docker -p 80:80 --detach spring-boot-docker:0.0.2
+ docker ps -> lista de conainter
+ docker sptop -> es para parar una imagen por nombre o por id
+ docker ps -a -> si esta parado entonces con este te va mostrar la lista
+ 
+ si desea compartir en public se debe usar docker hub
+ docker tag spring-boot-docker:0.0.2 usuariodockehub/spring-boot-docker:0.0.2
+ despues de ello puedes chequear con docker images
+ 
+ enviar a docker hub
+ 
+ docker push usuariodockehub/spring-boot-docker:0.0.2
+ 
+ boarra el container 
+ docker rm spring-boot-docker
+ 
+ docker ps -a
+ 
+ docker images
+ 
+ docker rmi iddocker
+ 
+ 
+ 
