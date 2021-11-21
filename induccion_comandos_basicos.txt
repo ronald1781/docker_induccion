@@ -1,3 +1,5 @@
+
+ 
  docker info -> visualiza informacion como donde esta instalado y uso de cpu etc
  docker images -> lista imagenes creados
  docker build -> crear imagen basada en 
