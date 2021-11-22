@@ -1,0 +1,46 @@
+sudo dnf check-update
+sudo dnf upgrade
+sudo dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
+
+sudo dnf install docker-ce --nobest --allowerasing -y
+sudo systemctl start docker
+sudo systemctl status docker
+
+sudo systemctl enable docker
+
+docker
+
+sudo docker run hello-world
+sudo docker search centos
+
+sudo docker pull centos
+sudo docker run centos
+
+sudo docker images
+sudo docker run -it centos
+
+dnf install @mysql
+
+sudo docker commit -m "changes that you made" -a "Author Name" container-id repository/new_image_name
+
+sudo docker commit -m "added MySQL" -a "John Doe" 163e7ed6525f centos
+
+sudo docker images
+
+sudo docker ps
+
+sudo docker ps -a
+
+sudo docker stop container-id
+
+docker login -u docker-registry-username
+
+docker push docker-registry-username/docker-image-name
+
+https://linuxhint.com/install-use-docker-centos-8/
+
+
+
+
+
+
