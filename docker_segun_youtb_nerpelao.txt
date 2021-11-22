@@ -1,0 +1,9 @@
+Instalacion
+
+pwaigna de docker
+bajar win,mac=> solo se baja
+linux
+
+dockerfile->archivo
+build -> imagen
+run -> contenedor
