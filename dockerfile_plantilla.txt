@@ -1,0 +1,31 @@
+CONTENIDO DEL FICHERO
+FROM:(Crea una capa "stage" base a partir de una imagen docker existente.)
+VOLUME:(Crear un mecanismo para persistir datos)
+EXPOSE:(Indica al contenedor que puerto exponer)
+ARG:(Define una variable que puede ser pasada en tiempo de construccion)
+ADD:(Agrega contenido al sistema de archivos de l contenedor que se va a crear)
+ENTRYPOINT:(Configura lo que se ejecutara dentro del contenedor)
+ 
+ ejemplo 01 
+FROM openjdk:8-jdk-alpine
+VOLUME /tmp
+EXPOSE 8080
+ARG JAR_FILE=target/dockerbasico-0.0.1-SNAPSHOT.jar
+ADD ${JAR_FILE} app.jar
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
+
+ ejemplo 02 
+FROM openjdk:11 #11-jdk-slim
+EXPOSE 8090
+ARG JAR_FILE=ms-anime.jar
+ADD ${JAR_FILE} ms-anime.jar
+ENTRYPOINT ["java","-jar","/ms-anime.jar"]
+
+COSTRUIR LA IMAGEN
+Para construir la imagen: docker build -t <nombreContenedor> .
+ejemplo
+Para construir la imagen: docker build -t dockerbasico .
+
+EJECUTAR LA IMEGEN DOCKER
+para ejecutar la imagen: docker run -it -p 8080:8080 dockerbasico
+
