@@ -1,0 +1,21 @@
+1 Instalar docker
+ sudo yum update -y
+ sudo amazon-linux-extras install docker
+ sudo service docker start
+ sudo usermod -a -G docker ec2-user
+ sudo docker info
+ 
+ 2 ejecutar docker
+ 
+ sudo docker run -d -p 8080:80 nginx
+ 
+ 3 compilar docker
+ 
+ docker build -t java01 .
+ docker build -t java01:0.0.1 .
+ 
+ 4 ejecutar docker
+ 
+ sudo docker run -d -p 8090:80 nginx
+ 
+ 
